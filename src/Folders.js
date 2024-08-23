@@ -13,7 +13,7 @@ const Folders = ({ people, setPeople, isLiked, removeFromFavorites, folders, set
             name: "",
             image: [],
             description: "",
-            visibility: false,
+            visibility: true,
 
         }
     )

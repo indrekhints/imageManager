@@ -39,11 +39,20 @@ const NavBar = ({ people }) => {
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container">
                     <Link className="navbar-brand" to="/">Home</Link>
+<<<<<<< HEAD
                     <button className="navbar-toggler" type="button"
                         onClick={() => setShowMenu(prev => !prev)}
                         aria-expanded={showMenu}
                         aria-label="Toggle navigation" >
                         <span className="navbar-toggler-icon"></span>
+=======
+                    <button className="navbar-toggler" 
+                        type="button" 
+                        onClick={() => setShowMenu(prev => !prev)} 
+                         aria-expanded={showMenu} 
+                        aria-label="Toggle navigation" > 
+                        <span className="navbar-toggler-icon"></span> 
+>>>>>>> 00bd34d60165dbe2d43dbfd5a769b5cb222e5b39
                     </button>
                     <div className={`collapse navbar-collapse ${showMenu ? 'show' : ''}`} id="navbarNav">
                         <ul className="navbar-nav">

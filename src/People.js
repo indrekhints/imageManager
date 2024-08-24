@@ -4,7 +4,7 @@ const People = [
         name: 'Mari Mets',
         phone: '123-456-7890',
         education: '...Degree',
-        picture: '/images/woman1.jpg',
+        picture: '/images/woman2.jpg',
         like: false
     },
     {
@@ -12,7 +12,7 @@ const People = [
         name: 'Jane Jane',
         phone: '987-654-3210',
         education: '....Degree',
-        picture: '/images/woman2.jpg',
+        picture: '/images/woman1.jpg',
         like: false
     },
     {

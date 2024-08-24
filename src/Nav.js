@@ -10,6 +10,7 @@ const NavBar = ({ people }) => {
     const [searchInput, setSearchInput] = useState({ name: "" }) //this trach value from input
     const [searchFilter, setSearchFilter] = useState([]) // this where i save  filtered array version
     const [showModal, setShowModal] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
 
     const Search = () => {
         const filteredPeople = people.filter(person =>
@@ -38,10 +39,13 @@ const NavBar = ({ people }) => {
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container">
                     <Link className="navbar-brand" to="/">Home</Link>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button className="navbar-toggler" type="button"
+                        onClick={() => setShowMenu(prev => !prev)}
+                        aria-expanded={showMenu}
+                        aria-label="Toggle navigation" >
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarNav">
+                    <div className={`collapse navbar-collapse ${showMenu ? 'show' : ''}`} id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
                                 <Link className="nav-link" to="/Folders">Folders</Link>

@@ -5,11 +5,16 @@ import { useState, useRef, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import { useLocation } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+/* import TestImage from './images/woman1.jpg'; */
 
 
 
 
-const PeopleComponent = (props) => {                 //  komponent, mis kasutab väärttuste kuvamiseks  props. 
+const PeopleComponent = (props) => {
+
+    console.log('Picture:', props.picture);
+
+    //  komponent, mis kasutab väärttuste kuvamiseks  props. 
     const [like, setLike] = useState(true);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -37,7 +42,16 @@ const PeopleComponent = (props) => {                 //  komponent, mis kasutab 
             <div className="card" style={{ marginTop: "20px" }} >
                 <div style={{ position: 'relative' }}>
 
-                    <img src={props.picture instanceof File ? URL.createObjectURL(props.picture) : props.picture} className="card-img-top" />
+                    <img
+                        src={props.picture instanceof File
+                            ? URL.createObjectURL(props.picture)
+                            : `${process.env.PUBLIC_URL}${props.picture}`}
+                        className="card-img-top"
+                        alt="A person"
+                    />
+
+                    {/*  <img src={`${process.env.PUBLIC_URL}/images/woman1.jpg`} alt="A person" /> */}
+
 
 
                     <button

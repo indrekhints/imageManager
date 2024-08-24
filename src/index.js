@@ -1,5 +1,5 @@
 
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route, HashRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
@@ -86,9 +86,7 @@ const AppWithPeople = () => {
   );
 }
 
-ReactDOM.render(
-  <AppWithPeople />,
-  document.getElementById('root')
-);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<AppWithPeople />);
 
-reportWebVitals()
+reportWebVitals();

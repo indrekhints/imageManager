@@ -101,7 +101,7 @@ const Folders = ({ people, setPeople, isLiked, removeFromFavorites, folders, set
                 </div>
                 <div className="row">
                     <div className="col">
-                        <button type="submit" className="btn mr-2" style={{ backgroundColor: "#C7C5CA" }}>Greate</button>
+                        <button type="submit" className="btn mr-2" style={{ backgroundColor: "#C7C5CA" }}>Create</button>
                     </div>
                 </div>
 
@@ -109,6 +109,7 @@ const Folders = ({ people, setPeople, isLiked, removeFromFavorites, folders, set
             </form>
 
             {folders && folders.map((item) => (
+                console.log('%cYour log message here', 'background: blue; color: red; font-weight: bold; padding: 4px;', folders),
                 <div className="border border-secondary bg-light shadow-sm my-2 pb-0" key={item.id}>
                     <div
                         className="mb-0 text-light text-uppercase d-flex justify-content-between align-items-center"
@@ -116,6 +117,7 @@ const Folders = ({ people, setPeople, isLiked, removeFromFavorites, folders, set
                         onClick={() => handleVisibility(item.id)}
                     >{/* ****************************  folder Name edit  delete. Dolders kaust ******************** */}
                         <span>FOLDER: {item.name}{item.description}</span>
+
                         <div style={{ paddingLeft: "10px" }}>
                             <span style={{ marginRight: "30px" }} onClick={handleEditClick}>EDIT</span>
                             <span style={{ marginLeft: "30px" }} onClick={() => deleteFolder(item.id)}>DELETE</span>
@@ -156,21 +158,22 @@ const Folders = ({ people, setPeople, isLiked, removeFromFavorites, folders, set
 
                                         <div className="d-flex align-items-center">
                                             {item.image.map((unit, index) => (
-                                                <img
-                                                    src={unit.img instanceof File ? URL.createObjectURL(unit.img) : unit.img}
-                                                    alt="Image"
-                                                    key={index}
-                                                    style={{
-                                                        marginRight: '10px',
-                                                        width: '300px',
-                                                        height: 'auto',
-                                                        borderRadius: '10px'
-                                                    }}
-                                                />
+
+                                                <div style={{ maxWidth: '30%', overflow: 'hidden', margin: 'auto' }}>
+                                                    <h5 style={{ color: "grey", fontSize: '12px' }}>imgId: {unit.id}</h5>
+                                                    <img
+                                                        src={unit.img}
+                                                        alt="Test Image"
+                                                        style={{ width: '100%', height: 'auto' }}
+                                                    />
+                                                    <h6 style={{ color: "grey", fontSize: '12px' }}>
+                                                        Additional data under construction...
+                                                    </h6>
+                                                </div>
                                             ))}
                                         </div>
                                     ) : (
-                                        <p style={{ color: "E1DEE5" }}>The folder is empty now!</p>
+                                        <p style={{ color: "E1DEE5" }}>The folder is empty!</p>
                                     )}
 
                                 </>

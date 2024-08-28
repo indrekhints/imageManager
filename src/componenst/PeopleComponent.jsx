@@ -117,7 +117,7 @@ const PeopleComponent = (props) => {
 
                 <div style={{ backgroundColor: '#ffffff' }}>
 
-                    <Link className="navbar-brand" to="/Folders"> <p style={{ backgroundColor: '#343a40', color: "white" }}>Greate folder! <h3>+</h3> </p></Link>
+                    <Link className="navbar-brand" to="/Folders"> <p style={{ backgroundColor: '#343a40', color: "white" }}>Create folder! <h3>+</h3> </p></Link>
                     {/* *************** list item legend********** */}
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                         <span><h6 style={{ color: "#C5BFAE" }}>Add item to folder</h6></span>

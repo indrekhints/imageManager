@@ -34,7 +34,13 @@ const Lemmikud = ({ people, isLiked, removeFromFavorites }) => {
                         {isLiked.map((person, index) => (
                             <div className="col-md-4 mb-3" key={index}>
                                 <div className="card">
-                                    <img src={person.picture instanceof File ? URL.createObjectURL(person.picture) : person.picture} className="card-img-top" />
+                                    <img
+                                        src={person.picture instanceof File
+                                            ? URL.createObjectURL(person.picture)
+                                            : `${process.env.PUBLIC_URL}${person.picture}`}
+                                        className="card-img-top"
+                                        alt="A person"
+                                    />
                                     <div className="card-body">
                                         <h5 className="card-title">{person.name}</h5>
                                         <p className="card-text">Phone: {person.phone}</p>

@@ -71,7 +71,7 @@ const NavBar = ({ people }) => {
                     </div>
 
                     <div className="input-group mb-3" style={{ marginTop: "20px" }}>
-                        <button className="btn btn-outline-secondary" type="button" onClick={Search}>Searc</button>{/*  AND SEARCH BUTTON HERE */}
+                        <button className="btn btn-outline-secondary" type="button" onClick={Search}>Search</button>{/*  AND SEARCH BUTTON HERE */}
                         <input
                             type="text"
                             className="form-control"

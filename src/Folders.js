@@ -101,7 +101,7 @@ const Folders = ({ people, setPeople, isLiked, removeFromFavorites, folders, set
                 </div>
                 <div className="row">
                     <div className="col">
-                        <button type="submit" className="btn mr-2" style={{ backgroundColor: "#C7C5CA" }}>Greate</button>
+                        <button type="submit" className="btn mr-2" style={{ backgroundColor: "#C7C5CA" }}>Create</button>
                     </div>
                 </div>
 

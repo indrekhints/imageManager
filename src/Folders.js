@@ -101,7 +101,7 @@ const Folders = ({ people, setPeople, isLiked, removeFromFavorites, folders, set
                 </div>
                 <div className="row">
                     <div className="col">
-                        <button type="submit" className="btn mr-2" style={{ backgroundColor: "#C7C5CA" }}>Create</button>
+                        <button type="submit" className="btn mr-2" style={{ backgroundColor: "#C7C5CA" }}>Greate</button>
                     </div>
                 </div>
 
@@ -167,7 +167,7 @@ const Folders = ({ people, setPeople, isLiked, removeFromFavorites, folders, set
                                                         style={{ width: '100%', height: 'auto' }}
                                                     />
                                                     <h6 style={{ color: "grey", fontSize: '12px' }}>
-                                                        Additional data under construction...
+                                                        data under construction...
                                                     </h6>
                                                 </div>
                                             ))}
